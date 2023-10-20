@@ -17,11 +17,11 @@ stack_t *add_new_end_node(stack_t **head, const int num)
 	if (!ptr)
 	{
 		dprintf(2, "Error: malloc failed\n");
-		free_vglo();
+		_free_vg();
 		exit(EXIT_FAILURE);
 	}
 
-	ptr->num = num;
+	ptr->n = num;
 	if (*head == NULL)
 	{
 		ptr->next = *head;
@@ -55,10 +55,10 @@ stack_t *add_new_beg_node(stack_t **head, const int num)
 	if (!ptr)
 	{
 		dprintf(2, "Error: malloc failed\n");
-		free_vglo();
+		_free_vg();
 		exit(EXIT_FAILURE);
 	}
-	ptr->num = num;
+	ptr->n = num;
 	if (*head == NULL)
 	{
 		ptr->next = *head;

@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _GNU_SOURCE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -39,8 +41,42 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct glo - global structure to use in the functions
+ * @lifo: is stack or queue
+ * @cont: current line
+ * @arg: second parameter inside the current line
+ * @head: doubly linked list
+ * @fd: file descriptor
+ * @buffer: input text
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO Holberton project
+ */
+typedef struct glo
+{
+	int lifo;
+	unsigned int cont;
+	char  *arg;
+	stack_t *head;
+	FILE *fd;
+	char *buffer;
+} global_t;
+
+extern global_t vg;
+
+void push_element(stack_t **head, unsigned int count);
+void pall_element(stack_t **head, unsigned int count);
+
 stack_t *add_new_end_node(stack_t **head, const int num);
 stack_t *add_new_beg_node(stack_t **head, const int num);
 void _freedlist(stack_t *head);
 
+
+void _free_vg(void);
+void _start_vg(FILE *sfd);
+FILE *check_file(int argc, char *argv[]);
+
+
+void (*implement_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
 #endif
