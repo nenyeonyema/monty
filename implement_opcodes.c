@@ -10,7 +10,7 @@ void (*implement_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
 	instruction_t instruct[] = {
 		{"push", push_element},
 		{"pall", pall_element},
-		/* {"pint", pint_element}; */
+		{NULL, NULL}
 	};
 
 	int n;

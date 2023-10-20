@@ -12,8 +12,7 @@ void push_element(stack_t **head, unsigned int count)
 
 	if (!vg.arg)
 	{
-		dprintf(2, "L%u: ", count);
-		dprintf(2, "usage: push integer\n");
+		dprintf(2, "L%u: usage: push integer\n ", count);
 		_free_vg();
 		exit(EXIT_FAILURE);
 	}
@@ -22,8 +21,7 @@ void push_element(stack_t **head, unsigned int count)
 	{
 		if (!isdigit(vg.arg[n]) && vg.arg[n] != '-')
 		{
-			dprintf(2, "L%u: ", count);
-			dprintf(2, "usage: push integer\n");
+			dprintf(2, "L%u: usage: push integer\n", count);
 			_free_vg();
 			exit(EXIT_FAILURE);
 		}
