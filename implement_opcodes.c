@@ -10,10 +10,9 @@ void (*implement_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
 	instruction_t instruct[] = {
 		{"push", push_element},
 		{"pall", pall_element},
-              /*{"pint", pint_element};*/
+		/* {"pint", pint_element}; */
 	};
 
-	/**
 	int n;
 
 	for (n = 0; instruct[n].opcode; n++)
@@ -21,7 +20,7 @@ void (*implement_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
 		if (_strcmp(instruct[n].opcode, opc) == 0)
 			break;
 	}
-        return (instruct[n].f);
-	*/
+	return (instruct[n].f);
+
 	return (0);
 }

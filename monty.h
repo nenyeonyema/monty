@@ -2,6 +2,7 @@
 #define MONTY_H
 
 #define _GNU_SOURCE
+#define  _POSIX_C_SOURCE 200809L
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -79,4 +80,8 @@ FILE *check_file(int argc, char *argv[]);
 
 
 void (*implement_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
+int _strcmp(char *str1, char *str2);
+int _sch(char *str, char ch);
+char *_strtoky(char *str, char *delim);
+
 #endif
