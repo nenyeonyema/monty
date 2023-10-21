@@ -70,6 +70,7 @@ void push_element(stack_t **head, unsigned int count);
 void pall_element(stack_t **head, unsigned int count);
 void pint_element(stack_t **head, unsigned int count_line);
 void pop_element(stack_t **head, unsigned int count_line);
+void swap_element(stack_t **head, unsigned int count_line);
 
 stack_t *add_new_end_node(stack_t **head, const int num);
 stack_t *add_new_beg_node(stack_t **head, const int num);
