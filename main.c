@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 	ssize_t num_lines = 0;
 	char *len[2] = {NULL, NULL};
 
-
 	sfd = check_file(argc, argv);
 	_start_vg(sfd);
 	num_lines = getline(&vg.buffer, &size, sfd);
@@ -27,7 +26,7 @@ int main(int argc, char *argv[])
 		len[0] = _strtoky(vg.buffer, " \t\n");
 		if (len[0] && len[0][0] != '#')
 		{
-			f = implement_opcodes(len[0]);
+			f = implement(len[0]);
 
 			if (!f)
 			{

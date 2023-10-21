@@ -79,7 +79,7 @@ void _start_vg(FILE *sfd);
 FILE *check_file(int argc, char *argv[]);
 
 
-void (*implement_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
+void (*implement(char *opc))(stack_t **stack, unsigned int line_number);
 int _strcmp(char *str1, char *str2);
 int _sch(char *str, char ch);
 char *_strtoky(char *str, char *delim);

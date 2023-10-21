@@ -5,7 +5,7 @@
  * @opc: value of the opcode
  * Return: pointer of the executed opcode
  */
-void (*implement_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
+void (*implement(char *opc))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t instruct[] = {
 		{"push", push_element},
