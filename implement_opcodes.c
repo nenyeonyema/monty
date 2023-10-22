@@ -23,6 +23,8 @@ void (*implement(char *opc))(stack_t **stack, unsigned int line_number)
 		{"pstr", pstr_},
 		{"rotl", rotl_},
 		{"rotr", rotr_},
+		{"stack", stack_},
+		{"queue", queue_},
 		{NULL, NULL}
 	};
 
