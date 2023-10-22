@@ -22,6 +22,7 @@ void (*implement(char *opc))(stack_t **stack, unsigned int line_number)
 		{"pchar", pchar_},
 		{"pstr", pstr_},
 		{"rotl", rotl_},
+		{"rotr", rotr_},
 		{NULL, NULL}
 	};
 
