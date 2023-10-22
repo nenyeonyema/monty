@@ -18,6 +18,7 @@ void (*implement(char *opc))(stack_t **stack, unsigned int line_number)
 		{"sub", sub_element},
 		{"div", div_element},
 		{"mul", mul_element},
+		{"mod", mod_element},
 		{NULL, NULL}
 	};
 
