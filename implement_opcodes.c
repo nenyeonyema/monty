@@ -21,6 +21,7 @@ void (*implement(char *opc))(stack_t **stack, unsigned int line_number)
 		{"mod", mod_element},
 		{"pchar", pchar_},
 		{"pstr", pstr_},
+		{"rotl", rotl_},
 		{NULL, NULL}
 	};
 

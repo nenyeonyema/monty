@@ -79,6 +79,7 @@ void mul_element(stack_t **head, unsigned int count_line);
 void mod_element(stack_t **head, unsigned int count_line);
 void pchar_(stack_t **head, unsigned int count_line);
 void pstr_(stack_t **head, unsigned int count_line);
+void rotl_(stack_t **head, unsigned int count_line);
 
 
 stack_t *add_new_end_node(stack_t **head, const int num);
