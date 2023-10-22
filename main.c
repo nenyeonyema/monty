@@ -1,6 +1,6 @@
 #include "monty.h"
 
-global_t vg;
+glo_t vg;
 
 /**
  * main - Entry point

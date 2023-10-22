@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * push_element - a functio that pushes an element into the stack
+ * push_element - a function that pushes an element into the stack
  * @head: double pointer to head of the list
  * @count: line number
  * Return: void
@@ -36,8 +36,7 @@ void push_element(stack_t **head, unsigned int count)
 }
 
 /**
- * pall_element - prints all values on the stack
- *
+ * pall_element - a function that prints all values on the stack
  * @head: head of the linked list
  * @count: line numbers
  * Return: no return

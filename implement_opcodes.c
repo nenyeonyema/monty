@@ -14,6 +14,7 @@ void (*implement(char *opc))(stack_t **stack, unsigned int line_number)
 		{"pop", pop_element},
 		{"swap", swap_element},
 		{"add", add_element},
+		{"nop", nop_},
 		{NULL, NULL}
 	};
 
